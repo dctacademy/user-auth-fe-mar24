@@ -1,4 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 import { useContext } from 'react'
 import AuthContext from './context/AuthContext';
 import Register from './pages/Register';
@@ -8,6 +11,7 @@ import Profile from './pages/Profile';
 
 function App() {
   const { state } = useContext(AuthContext)
+  
   return (
     <div className="App">
         <h2>User Auth Client</h2>
@@ -25,6 +29,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
+
+        <ToastContainer />
     </div>
   );
 }

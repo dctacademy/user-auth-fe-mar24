@@ -9,9 +9,6 @@ function App () {
     }
   
     function AuthProvider() {
-        useEffect(() => {
-
-        }, [])
       console.log('start Auth provider')
       App()
       console.log('end Auth provider')
