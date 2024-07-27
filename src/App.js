@@ -1,10 +1,13 @@
 import { Routes, Route, Link } from 'react-router-dom'
+import { useContext } from 'react'
+import AuthContext from './context/AuthContext';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 
 function App() {
+  const { state } = useContext(AuthContext)
   return (
     <div className="App">
         <h2>User Auth Client</h2>
